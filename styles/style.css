@@ -2,4 +2,135 @@
 
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  background-color: var(--bg-color);
+  background-image: var(--header-bg-image);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: "IBM Plex Mono", sans-serif;
+}
+
+.header {
+  min-block-size: 100vh;
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
+  justify-items: end;
+  align-items: center;
+  padding: 10px;
+}
+
+.header__theme-menu {
+  margin: 65px 0px;
+}
+
+.header__theme-menu-list {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 10px;
+  align-items: center;
+  color: var(--themeToggleButtonColor);
+}
+
+.header__theme-menu-button {
+  font-family: "IBM Plex Mono", sans-serif;
+  font-weight: var(--font-weight-regular);
+  font-size: var(--text-size);
+  line-height: 18px;
+  text-transform: lowercase;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 2px 13px 4px;
+}
+
+.header__theme-menu-button:hover {
+  border: 1px solid var(--themeToggleButtonColor);
+}
+
+.header__theme-menu-button_active {
+  pointer-events: none;
+}
+
+.header__theme-menu-button:focus-visible {
+  text-decoration: underline;
+  border: none;
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
+}
+
+.header__title {
+  margin: 50px 0;
+}
+
+.header__title-text {
+  color: var(--accent-color);
+  text-shadow: 4px 4px 0px var(--accent-color-shadow) ;
+  font-family: "IBM Plex Mono";
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 82.5%; /* 99px */
+  
+}
+
+.header__description {
+  color: #000028;
+  font-family: "IBM Plex Mono", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 23.4px; /* 130% */
+  width: 364px;
+  background-color: var(--header-bg-description-color);
+}
+
+.decorated-zone {
+  position: relative;
+}
+
+.decorated-zone::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  block-size: 25px;
+  inline-size: 25px;
+  border-top: 1px solid var(--headerDecorationColor);
+  border-right: 1px solid var(--headerDecorationColor);
+}
+
+.decorated-zone::after {
+  content: "";
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  inline-size: 25px;
+  block-size: 25px;
+  border-bottom: 1px solid var(--headerDecorationColor);
+  border-left: 1px solid var(--headerDecorationColor);
+}
+
+.rec__icon::before {
+  content: "REC";
+  position: absolute;
+  top: 10px;
+  right: 38px;
+  line-height: 25px;
+  font-size: var(--text-size);
+  font-weight: var(--font-weight-regular);
+  color: var(--headerAccentColor);
+}
+
+.rec__icon::after {
+  content: "";
+  position: absolute;
+  right: 19px;
+  top: 17px;
+  background-color: var(--headerAccentColor);
+  inline-size: 9px;
+  block-size: 9px;
+  box-shadow: 0px 0px 4px 2px var(--headerAccentColor);
+  border-radius: 50%;
 }
