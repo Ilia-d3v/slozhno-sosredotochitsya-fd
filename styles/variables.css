@@ -1,34 +1,56 @@
 /*
-  Переменные для вашего проекта
-  и их переопределение под различные устройства
+  Основные переменные проекта и их адаптация под ширину экрана.
 */
+
 :root {
-  --accent-color: #DB00FF;
-  --accent-color-shadow: #FF0070;
-  --header-bg-image: url('../images/cover-image-dark.png');
-  --bg-color: #000028;
-  --header-bg-description-color: #FF0070;
-  --themeToggleButtonColor: #FF0070;
-  --headerDecorationColor: #FF0070;
-  --headerAccentColor: #FF0070;
-  --mainContentTextColor: #FF0070;
+  --accent-color: #ff0070;
+  --accent-decor-font-color: #000028;
+  --accent-font-color: #ff0070;
+  --accent-font-color-transparent: #ff007040;
+  --background-color: #000028;
+  --main-text-font-color: #f1b2ce;
+  --second-accent-color: #db00ff;
 
-  --text-color-light: #F1B2CE;
-  --text-color-dark: #000028;
-  --section-title-color: #FF0070;
+  --background-pic: url("../images/cover-image-dark.png");
 
-  --spacing-small: 10px;
-  --spacing-medium: 15px;
-  --spacing-large: 20px;
-  --spacing-xlarge: 60px;
-  --header-margin: 50px 0;
-  --theme-menu-margin: 65px 0;
-  --header-title-font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  --description-width: 364px;
-  --default-font: "IBM Plex Mono", sans-serif;
-  --text-font-size: 18px;
-  --text-line-height: 23.4px;
-  --font-weight-regular: 400;
-  --font-weight-bold: 700;
-  --text-size: 18px;
+  --accent-font-weight: bold;
+  --main-font-size: 18px;
+  --main-font-weight: normal;
+  --section-line-height: 23.4px;
+  --site-tagline-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+
+  --grid-template-columns: 1fr;
+  --header-padding-block: 6.5vh 5vh;
+  --main-gap_between_sections: 50px;
+  --main-padding-block: 40px;
+  --menu-list-gap: 10px;
+  --padding-size: 10px;
+  --paragraph-top-padding: 10px;
+  --section-gap: 20px;
+
+  --rec-icon-display: inline;
+}
+
+@media (width >= 768px) {
+
+  :root {
+    --columns-left-padding: 8px;
+    --grid-template-columns: repeat(3, 1fr);
+    --header-padding-block: 11vh 10vh;
+    --main-gap_between_sections: 80px;
+    --main-padding-block: 60px;
+    --menu-list-gap: 8px;
+    --padding-size: 20px;
+
+    --site-tagline-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+}
+
+@media (width >= 1024px) {
+
+  :root {
+    --columns-left-padding: 0px;
+    --header-padding-block: var(--padding-size) 10vh;
+    --menu-list-gap: 10px;
+  }
 }
