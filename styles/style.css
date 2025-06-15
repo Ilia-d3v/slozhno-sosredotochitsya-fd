@@ -138,7 +138,6 @@
   color: var(--accent-decor-font-color);
   background-color: var(--accent-color);
   height: min-content;
-  font-weight: normal;
 }
 
 .main {
