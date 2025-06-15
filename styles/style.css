@@ -140,6 +140,10 @@
   height: min-content;
 }
 
+.highlight-subtitle {
+  font-weight: normal;
+}
+
 .main {
   display: grid;
   padding-block: var(--main-padding-block);
