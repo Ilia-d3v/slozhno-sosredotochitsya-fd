@@ -114,7 +114,7 @@
   border-bottom: 1px solid var(--accent-font-color);
 }
 
-.header__theme-menu-button--active {
+.header__theme-menu-button__active {
   border: 1px solid var(--accent-font-color);
   pointer-events: none;
 }
@@ -143,7 +143,7 @@
 .main {
   display: grid;
   padding-block: var(--main-padding-block);
-  gap: var(--main-gap_between_sections);
+  gap: var(--layout-section-gap);
 }
 
 .section {
@@ -253,12 +253,12 @@
     grid-row: 1;
   }
 
-  .sunset-pic {
+  .sunset-picture {
     grid-column: 1/3;
     grid-row: 2;
   }
 
-  .ice-cream-pic {
+  .ice-cream-picture {
     grid-column: 3;
     grid-row: 2 / 4;
 
@@ -268,7 +268,7 @@
     min-height: 100%;
   }
 
-  .tape-pic {
+  .tape-picture {
     grid-column: 1;
     grid-row: 3/5;
 
@@ -278,12 +278,12 @@
     min-height: 100%;
   }
 
-  .books-pic {
+  .books-picture {
     grid-column: 2;
     grid-row: 3;
   }
 
-  .street-pic {
+  .street-picture {
     grid-column: 2/4;
     grid-row: 4;
   }

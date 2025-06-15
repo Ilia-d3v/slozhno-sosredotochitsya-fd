@@ -21,7 +21,7 @@
 
   --grid-template-columns: 1fr;
   --header-padding-block: 6.5vh 5vh;
-  --main-gap_between_sections: 50px;
+  --layout-section-gap: 50px;
   --main-padding-block: 40px;
   --menu-list-gap: 10px;
   --padding-size: 10px;
@@ -37,7 +37,7 @@
     --columns-left-padding: 8px;
     --grid-template-columns: repeat(3, 1fr);
     --header-padding-block: 11vh 10vh;
-    --main-gap_between_sections: 80px;
+    --layout-section-gap: 80px;
     --main-padding-block: 60px;
     --menu-list-gap: 8px;
     --padding-size: 20px;
